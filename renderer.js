@@ -5,3 +5,12 @@
  * `contextIsolation` is turned on. Use the contextBridge API in `preload.js`
  * to expose Node.js functionality from the main process.
  */
+
+const fs = require('fs');
+
+let files = fs.readdirSync('.');
+console.log(files);
+let list = document.querySelector('#files');
+files.forEach(file =>{
+    list.innerHTML += `<li>${filee}</li>`;
+});
